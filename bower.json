@@ -1,0 +1,22 @@
+{
+  "name": "beunschepen",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Bohdan-Ivan Maliuha <bogdan.maliuga@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "owl.carousel": "^2.2.1"
+  }
+}
