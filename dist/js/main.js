@@ -1,13 +1,13 @@
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 20,
+        margin: 36,
         responsive: {
             0: {
                 items: 1,
                 pagination: true,
-                margin: 10,
-                stagePadding: 20
+                margin: 12,
+                stagePadding: 25
             },
             540: {
                 items: 2,
