@@ -27,59 +27,6 @@ nav.navbar {
     padding: 0; }
     nav.navbar .navbar-brand img.mobile {
       display: none; }
-  nav.navbar .button.empty-btn {
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 25px;
-    background: linear-gradient(to right, #E00C1C, #F18B00);
-    margin-top: -8px; }
-    nav.navbar .button.empty-btn .empty-inner {
-      background-color: #fff;
-      color: #7ad006;
-      text-transform: uppercase;
-      background: #fff;
-      border-radius: 25px;
-      display: inline-block;
-      position: relative;
-      margin: 2px;
-      transition: all 0.3s linear; }
-      nav.navbar .button.empty-btn .empty-inner:after {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        background: linear-gradient(to right, #E00C1C, #F18B00);
-        z-index: -1;
-        transition: all 0.3s linear; }
-      nav.navbar .button.empty-btn .empty-inner:hover {
-        color: #303030;
-        background: transparent;
-        background: linear-gradient(to right, #E00C1C, #F18B00); }
-        nav.navbar .button.empty-btn .empty-inner:hover:after {
-          background: linear-gradient(to right, #E00C1C, #F18B00); }
-    nav.navbar .button.empty-btn a {
-      font-size: 12px;
-      color: #F18B00;
-      display: block;
-      font-family: 'Lato';
-      width: 159px;
-      letter-spacing: 0.25px;
-      height: 52px;
-      line-height: 30px;
-      padding: 12px 0;
-      text-align: center; }
-      nav.navbar .button.empty-btn a i {
-        color: #E00C1C;
-        font-size: 14px;
-        margin-left: 7px; }
-      nav.navbar .button.empty-btn a:hover {
-        text-decoration: none;
-        color: white;
-        background: linear-gradient(to right, #E00C1C, #F18B00); }
-        nav.navbar .button.empty-btn a:hover i {
-          color: white; }
   nav.navbar .menu-show .icon-bar {
     transition: 300ms ease-in-out;
     background-color: #fff;
@@ -112,6 +59,61 @@ nav.navbar {
     nav.navbar .navbar-nav .active a:hover {
       color: #063250;
       background-color: white; }
+  nav.navbar .navbar-nav li .outlinebtn {
+    margin-left: 14px;
+    padding: 2px;
+    border-radius: 100px;
+    vertical-align: middle;
+    transition: all 0.3s linear;
+    margin-top: -8px;
+    background: #F18B00;
+    /* Old browsers */
+    background: -moz-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, right, left, color-stop(0%, #F18B00), color-stop(100%, #E00C1C));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
+    /* W3C */ }
+    nav.navbar .navbar-nav li .outlinebtn a {
+      letter-spacing: 0px;
+      display: block;
+      font-family: 'Lato';
+      font-weight: 700;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-transform: uppercase;
+      background-color: white;
+      border: none;
+      padding: 19px 38px;
+      border-radius: 100px;
+      color: #F18B00;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      transition: all 0.3s linear; }
+      nav.navbar .navbar-nav li .outlinebtn a .fa {
+        transition: all 0.3s linear;
+        color: #E00C1C;
+        margin-left: 11px; }
+    nav.navbar .navbar-nav li .outlinebtn:hover {
+      color: #fff;
+      background-color: transparent;
+      transition: all 0.3s linear; }
+      nav.navbar .navbar-nav li .outlinebtn:hover a {
+        transition: all 0.3s linear;
+        background: none;
+        color: white;
+        text-decoration: none; }
+        nav.navbar .navbar-nav li .outlinebtn:hover a i {
+          color: white;
+          transition: all 0.3s linear; }
   @media (min-width: 768px) {
     nav.navbar .navbar-nav .open a {
       color: white; }
@@ -121,15 +123,15 @@ nav.navbar {
       border-top-left-radius: 4px;
       background: #219CD3;
       /* Old browsers */
-      background: -moz-linear-gradient(left, #219CD3 0%, #0F587F 100%);
+      background: -moz-linear-gradient(right, #219CD3 0%, #0F587F 100%);
       /* FF3.6+ */
-      background: -webkit-gradient(linear, left, right, color-stop(0%, #219CD3), color-stop(100%, #0F587F));
+      background: -webkit-gradient(linear, right, left, color-stop(0%, #219CD3), color-stop(100%, #0F587F));
       /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(left, #219CD3 0%, #0F587F 100%);
+      background: -webkit-linear-gradient(right, #219CD3 0%, #0F587F 100%);
       /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(left, #219CD3 0%, #0F587F 100%);
+      background: -o-linear-gradient(right, #219CD3 0%, #0F587F 100%);
       /* Opera 11.10+ */
-      background: -ms-linear-gradient(left, #219CD3 0%, #0F587F 100%);
+      background: -ms-linear-gradient(right, #219CD3 0%, #0F587F 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #0F587F 100%);
       /* W3C */ }
@@ -144,31 +146,33 @@ nav.navbar {
         margin: 9px auto;
         overflow: hidden;
         background-color: #D8D8D8;
-        width: 90%; }
+        width: 90%;
+        opacity: 0.2; }
     nav.navbar .navbar-nav li.dropdown a {
-      padding: 12px 25px; }
+      padding: 12px 20px; }
+      nav.navbar .navbar-nav li.dropdown a i {
+        margin-left: 10px; }
     nav.navbar .navbar-nav li a {
       font-size: 12px;
       color: #A7ACB2;
-      color: #A7ACB2;
-      padding: 12px 22.5px;
+      padding: 12px 20px;
       font-family: 'Lato';
       font-weight: 700; }
       nav.navbar .navbar-nav li a:hover {
         color: #063250;
-        background-color: white; }
+        text-decoration: none; }
     nav.navbar .navbar-nav li .dropdown-menu {
       background: #219CD3;
       /* Old browsers */
-      background: -moz-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -moz-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* FF3.6+ */
-      background: -webkit-gradient(linear, left, right, color-stop(0%, #219CD3), color-stop(100%, #063250));
+      background: -webkit-gradient(linear, right, left, color-stop(0%, #219CD3), color-stop(100%, #063250));
       /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -webkit-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -o-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* Opera 11.10+ */
-      background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -ms-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #063250 100%);
       /* W3C */
@@ -201,7 +205,8 @@ header {
       margin-bottom: 39px; }
       header .main-header h3 span {
         font-family: 'Lato';
-        font-style: italic; }
+        font-style: italic;
+        font-weight: 700; }
       header .main-header h3 i {
         font-style: italic;
         font-weight: 300; }
@@ -214,12 +219,19 @@ header {
       color: white;
       font-size: 13px;
       font-family: 'Lato';
-      font-weight: 700; }
+      font-weight: 700;
+      transition: all 0.3s linear; }
       header .main-header a.lees i {
         margin: 0px 0px 0px 16px;
-        font-size: 18px; }
+        font-size: 18px;
+        transition: all 0.1s linear; }
       header .main-header a.lees:hover {
-        text-decoration: none; }
+        background-color: #fff;
+        text-decoration: none;
+        color: #063250;
+        transition: all 0.3s linear; }
+        header .main-header a.lees:hover i {
+          color: #063250; }
   header .bottom-header {
     position: absolute;
     bottom: 0;
@@ -243,6 +255,29 @@ header {
       header .bottom-header a.mouse:hover {
         text-decoration: none;
         cursor: pointer; }
+      header .bottom-header a.mouse .scroll {
+        display: inline-block;
+        width: 3px;
+        height: 6px;
+        background: white;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        margin-top: 7px;
+        animation-name: scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+        animation-iteration-count: infinite; }
+
+@keyframes scroll {
+  0% {
+    opacity: 0; }
+  10% {
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    transform: translateY(15px);
+    opacity: 0; } }
 
 main .slogan {
   padding-top: 71px;
@@ -287,6 +322,92 @@ main .slogan {
       position: absolute;
       right: 54px;
       bottom: -54px; }
+
+main .content-text.second-content {
+  margin-bottom: 43px; }
+
+main .img-blok img {
+  max-width: 100%; }
+
+main .content-text {
+  padding-top: 70px; }
+  main .content-text h2 {
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left, right, color-stop(0%, #219CD3), color-stop(100%, #063250));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* Opera 11.10+ */
+    color: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #219CD3 0%, #063250 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* W3C */
+    font-size: 36px;
+    display: inline-block;
+    font-family: 'Lato';
+    font-weight: 700;
+    letter-spacing: 2px; }
+  main .content-text h3 {
+    font-size: 21px;
+    color: #9EA2A9;
+    font-family: 'Lato';
+    font-weight: 400;
+    margin-top: 7px;
+    letter-spacing: 1px; }
+  main .content-text h4 {
+    font-size: 24px;
+    margin-bottom: 28px;
+    margin-top: 23px;
+    padding-left: 2px;
+    display: inline-block;
+    font-family: 'Lato';
+    letter-spacing: 2.29px;
+    font-weight: 700;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left, right, color-stop(0%, #219CD3), color-stop(100%, #063250));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* Opera 11.10+ */
+    color: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #219CD3 0%, #063250 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* W3C */ }
+  main .content-text p.content-info {
+    color: #5E6A89;
+    font-family: 'Lato';
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: 30px;
+    font-weight: 400;
+    margin-bottom: 85px;
+    padding: 0 11px;
+    text-align: center; }
+  main .content-text p.content-more {
+    font-family: 'Lato';
+    font-weight: 400;
+    color: #5E6A89;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    padding-bottom: 30px; }
+  main .content-text .fa {
+    display: inline-block;
+    line-height: 78px;
+    font-size: 48px;
+    padding-left: 25px;
+    color: #1B3159; }
 
 main .text {
   padding-top: 116px;
@@ -385,7 +506,7 @@ main .bloken {
     color: white;
     font-size: 36px;
     font-family: 'Lato';
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 2px; }
   main .bloken h3 {
     color: white;
@@ -426,7 +547,13 @@ main .bloken {
       font-family: 'Lato';
       font-size: 24px;
       letter-spacing: 1px;
-      font-weight: 500; }
+      font-weight: 700;
+      display: inline-block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 95%;
+      margin-bottom: 5px; }
     main .bloken .bloken-item p.info {
       font-size: 16px;
       line-height: 32px;
@@ -436,54 +563,70 @@ main .bloken {
       font-family: 'Lato';
       padding: 0 31px;
       padding-top: 5px; }
-    main .bloken .bloken-item .button.empty-btn {
+    main .bloken .bloken-item .outlinebtn {
       display: inline-block;
-      overflow: hidden;
-      border-radius: 25px;
+      padding: 2px;
+      border-radius: 100px;
+      vertical-align: middle;
+      transition: all 0.3s linear;
       margin-top: 8px;
-      margin-bottom: 43px; }
-      main .bloken .bloken-item .button.empty-btn .empty-inner {
-        background-color: #fff;
-        border-radius: 25px;
-        display: inline-block;
-        position: relative;
-        margin: 2px;
-        transition: all 0.3s linear; }
-        main .bloken .bloken-item .button.empty-btn .empty-inner:after {
-          content: '';
-          position: absolute;
-          top: -2px;
-          left: -2px;
-          width: calc(100% + 4px);
-          height: calc(100% + 4px);
-          background: linear-gradient(to right, #219CD3, #063250);
-          z-index: -1;
-          transition: all 0.3s linear; }
-        main .bloken .bloken-item .button.empty-btn .empty-inner:hover {
-          color: #303030;
-          background: transparent; }
-          main .bloken .bloken-item .button.empty-btn .empty-inner:hover:after {
-            background: linear-gradient(to right, #219CD3, #063250); }
-      main .bloken .bloken-item .button.empty-btn a {
+      margin-bottom: 47px;
+      background: #219CD3;
+      /* Old browsers */
+      background: -moz-linear-gradient(right, #219CD3 0%, #063250 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, right, left, color-stop(0%, #219CD3), color-stop(100%, #063250));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(right, #219CD3 0%, #063250 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(right, #219CD3 0%, #063250 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(right, #219CD3 0%, #063250 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, #219CD3 0%, #063250 100%);
+      /* W3C */ }
+      main .bloken .bloken-item .outlinebtn a {
         font-size: 13px;
         font-family: 'Lato';
         letter-spacing: 0px;
         font-weight: 700;
         color: #136691;
-        line-height: 54px;
+        max-width: 254px;
+        white-space: nowrap;
+        overflow: hidden;
         display: block;
-        width: 163px; }
-        main .bloken .bloken-item .button.empty-btn a i {
+        font-family: 'Lato';
+        font-weight: 700;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        background-color: white;
+        border: none;
+        padding: 19px 35px;
+        border-radius: 100px;
+        color: #136691;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        transition: all 0.3s linear; }
+        main .bloken .bloken-item .outlinebtn a .fa {
+          transition: all 0.3s linear;
           color: #063250;
-          font-size: 16px;
-          /* margin-right: -9px; */
-          margin-left: 9px;
-          /* padding-left: 0px; */ }
-        main .bloken .bloken-item .button.empty-btn a:hover {
-          text-decoration: none;
-          color: white; }
-          main .bloken .bloken-item .button.empty-btn a:hover i {
-            color: white; }
+          margin-left: 11px; }
+      main .bloken .bloken-item .outlinebtn:hover {
+        color: #fff;
+        background-color: transparent;
+        transition: all 0.3s linear; }
+        main .bloken .bloken-item .outlinebtn:hover a {
+          transition: all 0.3s linear;
+          background: none;
+          color: white;
+          text-decoration: none; }
+          main .bloken .bloken-item .outlinebtn:hover a i {
+            color: white;
+            transition: all 0.3s linear; }
 
 main .contact {
   background: url(../img/bg-contact.png) 100% 100% no-repeat;
@@ -491,7 +634,7 @@ main .contact {
   background-size: cover;
   position: relative;
   padding-top: 72px;
-  padding-bottom: 91px;
+  padding-bottom: 97px;
   color: #003A59;
   text-align: center; }
   main .contact h2 {
@@ -500,54 +643,82 @@ main .contact {
     letter-spacing: 0.25px;
     font-weight: 700;
     margin-top: 22px;
-    margin-bottom: 24px; }
-  main .contact .button.empty-btn {
+    margin-bottom: 22px;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left, right, color-stop(0%, #219CD3), color-stop(100%, #063250));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* Opera 11.10+ */
+    color: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #219CD3 0%, #063250 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* W3C */
+    display: inline-block; }
+  main .contact .outlinebtn {
     display: inline-block;
-    overflow: hidden;
-    border-radius: 25px; }
-    main .contact .button.empty-btn .empty-inner {
-      background-color: #fff;
-      color: #7ad006;
-      text-transform: uppercase;
-      background: #fff;
-      border-radius: 25px;
-      display: inline-block;
-      position: relative;
-      margin: 2px;
-      transition: all 0.3s linear; }
-      main .contact .button.empty-btn .empty-inner:after {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        background: linear-gradient(to right, #F18B00, #E00C1C);
-        z-index: -1;
-        transition: all 0.3s linear; }
-      main .contact .button.empty-btn .empty-inner:hover {
-        color: #303030;
-        background: transparent; }
-        main .contact .button.empty-btn .empty-inner:hover:after {
-          background: linear-gradient(to right, #F18B00, #E00C1C); }
-    main .contact .button.empty-btn a {
+    padding: 2px;
+    border-radius: 100px;
+    vertical-align: middle;
+    transition: all 0.3s linear;
+    background: #F18B00;
+    /* Old browsers */
+    background: -moz-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, right, left, color-stop(0%, #F18B00), color-stop(100%, #E00C1C));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
+    /* W3C */ }
+    main .contact .outlinebtn a {
       font-size: 13px;
-      color: #F18B00;
-      line-height: 56px;
-      display: block;
-      width: 255px;
       font-family: 'Lato';
-      letter-spacing: 0.45px;
-      font-weight: 700; }
-      main .contact .button.empty-btn a i {
+      letter-spacing: 0px;
+      font-weight: 700;
+      color: #136691;
+      display: block;
+      font-family: 'Lato';
+      font-weight: 700;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-transform: uppercase;
+      background-color: white;
+      border: none;
+      padding: 19px 35px;
+      border-radius: 100px;
+      color: #F18B00;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      transition: all 0.3s linear; }
+      main .contact .outlinebtn a .fa {
+        transition: all 0.3s linear;
         color: #E00C1C;
-        font-size: 17px;
-        margin-left: 9px; }
-      main .contact .button.empty-btn a:hover {
-        text-decoration: none;
-        color: white; }
-        main .contact .button.empty-btn a:hover i {
-          color: white; }
+        margin-left: 14px;
+        font-size: 17px; }
+    main .contact .outlinebtn:hover {
+      color: #fff;
+      background-color: transparent;
+      transition: all 0.3s linear; }
+      main .contact .outlinebtn:hover a {
+        transition: all 0.3s linear;
+        background: none;
+        color: white;
+        text-decoration: none; }
+        main .contact .outlinebtn:hover a i {
+          color: white;
+          transition: all 0.3s linear; }
 
 footer {
   background: url(../img/bg3.png) 100% 100% no-repeat;
@@ -565,8 +736,14 @@ footer {
     padding-left: 29px;
     padding-right: 0px; }
   footer .footer-item {
-    min-height: 212px;
-    margin-bottom: 30px; }
+    min-height: 202px; }
+    footer .footer-item:after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      display: block;
+      width: 92%;
+      height: 3px; }
     footer .footer-item ul {
       list-style: none; }
     footer .footer-item h3.title {
@@ -584,24 +761,65 @@ footer {
       font-family: 'Lato';
       font-weight: 400;
       padding-right: 25px; }
-  footer .first-block {
-    border-bottom: 3px solid #979797; }
-  footer .second-block {
-    border-bottom: 3px solid #49AEDA; }
-    footer .second-block h3.title {
-      font-size: 14px; }
-    footer .second-block ul {
-      padding: 0;
-      margin: 0;
-      padding-bottom: 20px; }
-      footer .second-block ul li a {
-        color: #ADC8E7;
-        font-family: 'Lato';
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 30px; }
+  footer .first-block:after {
+    background: #FFFFFF;
+    /* Old browsers */
+    background: -moz-linear-gradient(right, #FFFFFF 0%, #DADADA 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, right, left, color-stop(0%, #FFFFFF), color-stop(100%, #DADADA));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right, #FFFFFF 0%, #DADADA 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right, #FFFFFF 0%, #DADADA 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, #FFFFFF 0%, #DADADA 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #FFFFFF 0%, #DADADA 100%);
+    /* W3C */ }
+  footer .second-block:after {
+    background: #49AEDA;
+    /* Old browsers */
+    background: -moz-linear-gradient(right, #49AEDA 0%, #219CD3 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, right, left, color-stop(0%, #49AEDA), color-stop(100%, #219CD3));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right, #49AEDA 0%, #219CD3 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right, #49AEDA 0%, #219CD3 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, #49AEDA 0%, #219CD3 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #49AEDA 0%, #219CD3 100%);
+    /* W3C */ }
+  footer .second-block h3.title {
+    font-size: 14px; }
+  footer .second-block ul {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 24px; }
+    footer .second-block ul li a {
+      color: #ADC8E7;
+      font-family: 'Lato';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 30px; }
   footer .third-block {
-    border-bottom: 3px solid #FFB141; }
+    padding-bottom: 85px; }
+    footer .third-block:after {
+      background: #FFB140;
+      /* Old browsers */
+      background: -moz-linear-gradient(right, #FFB140 0%, #F18E00 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, right, left, color-stop(0%, #FFB140), color-stop(100%, #F18E00));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(right, #FFB140 0%, #F18E00 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(right, #FFB140 0%, #F18E00 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(right, #FFB140 0%, #F18E00 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, #FFB140 0%, #F18E00 100%);
+      /* W3C */ }
     footer .third-block h3.title {
       font-size: 14px; }
     footer .third-block ul {
@@ -621,24 +839,37 @@ footer {
         bottom: -61px; }
         footer .third-block ul li:last-child a {
           letter-spacing: 0; }
-  footer .fourty-block {
-    border-bottom: 3px solid #FF5764; }
-    footer .fourty-block h3.title {
-      font-size: 14px; }
-    footer .fourty-block ul {
-      padding: 0; }
-      footer .fourty-block ul li {
-        color: #ADC8E7;
+  footer .fourty-block:after {
+    background: #FF5764;
+    /* Old browsers */
+    background: -moz-linear-gradient(right, #FF5764 0%, #E00D1D 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, right, left, color-stop(0%, #FF5764), color-stop(100%, #E00D1D));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right, #FF5764 0%, #E00D1D 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right, #FF5764 0%, #E00D1D 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, #FF5764 0%, #E00D1D 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #FF5764 0%, #E00D1D 100%);
+    /* W3C */ }
+  footer .fourty-block h3.title {
+    font-size: 14px; }
+  footer .fourty-block ul {
+    padding: 0; }
+    footer .fourty-block ul li {
+      color: #ADC8E7;
+      font-size: 14px;
+      line-height: 30px;
+      font-family: 'Lato';
+      font-weight: 400;
+      letter-spacing: 0.1px; }
+      footer .fourty-block ul li span {
         font-size: 14px;
-        line-height: 30px;
+        float: right;
         font-family: 'Lato';
-        font-weight: 400;
-        letter-spacing: 0.1px; }
-        footer .fourty-block ul li span {
-          font-size: 14px;
-          float: right;
-          font-family: 'Lato';
-          font-weight: 400p; }
+        font-weight: 400p; }
   @media (max-width: 992px) {
     footer .fourty-block ul li {
       font-size: 14px;
@@ -659,7 +890,7 @@ footer {
           float: none;
           text-align: right; } }
   footer .bottom-footer {
-    margin-top: 69px;
+    margin-top: 98px;
     background-color: #04263D; }
     footer .bottom-footer span {
       color: #ADC8E7;
@@ -691,15 +922,29 @@ footer {
   nav.navbar .navbar-nav li a {
     font-size: 12px;
     color: #A7ACB2;
-    padding: 12px 10px; }
+    padding: 12px 7px; }
     nav.navbar .navbar-nav li a:hover {
       color: #063250;
       background-color: white !important; }
   nav.navbar .button.empty-btn a {
     width: 100px; } }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  footer .footer-item {
+    min-height: 200px; }
+  footer [class^="col-"] {
+    padding-left: 15px !important;
+    padding-right: 15px !important; }
+  nav.navbar .navbar-nav li .outlinebtn {
+    margin-top: 0;
+    margin-left: 0; }
+    nav.navbar .navbar-nav li .outlinebtn a {
+      padding: 10px 20px; } }
+
 @media (max-width: 767px) {
-  nav.navbar .button.empty-btn {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    padding: 7px; }
+  nav.navbar .navbar-nav li .outlinebtn {
     background: none; }
   nav.navbar {
     padding: 3px 6px 3px 12px; }
@@ -833,7 +1078,7 @@ footer {
       margin-bottom: 5px; }
   main .bloken {
     padding-top: 25px;
-    padding-bottom: 11px; }
+    padding-bottom: 12px; }
     main .bloken h2 {
       font-size: 14px;
       font-weight: 600;
@@ -844,18 +1089,15 @@ footer {
       margin-top: 21px; }
     main .bloken .bloken-item {
       padding-top: 34px; }
-      main .bloken .bloken-item .button.empty-btn a {
-        font-size: 11px;
-        color: #136691;
-        line-height: 42px;
-        display: block;
-        width: 118px;
-        letter-spacing: 0.5px; }
-        main .bloken .bloken-item .button.empty-btn a i {
-          color: #063250;
-          font-size: 12px;
-          /* margin-right: -9px; */
-          margin-left: 7px; }
+      main .bloken .bloken-item .outlinebtn {
+        margin-top: 7px; }
+        main .bloken .bloken-item .outlinebtn a {
+          padding: 14px 18px;
+          font-size: 11px;
+          font-weight: 400; }
+          main .bloken .bloken-item .outlinebtn a .fa {
+            margin-left: 8px;
+            font-size: 14px; }
       main .bloken .bloken-item h4 {
         font-size: 19px;
         letter-spacing: 0.89px; }
@@ -872,11 +1114,20 @@ footer {
         /* letter-spacing: 0; */ }
   main .contact {
     padding-top: 25px;
-    padding-bottom: 43px; }
+    padding-bottom: 47px; }
     main .contact h2 {
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 0.25px; }
+    main .contact .outlinebtn {
+      margin-top: 1px; }
+      main .contact .outlinebtn a {
+        padding: 15px 18px;
+        font-size: 11px;
+        font-weight: 400; }
+        main .contact .outlinebtn a .fa {
+          margin-left: 8px;
+          font-size: 14px; }
     main .contact .button.empty-btn a {
       width: 192px;
       line-height: 45px;
@@ -902,6 +1153,8 @@ footer {
       border-bottom: none;
       min-height: auto;
       margin-bottom: 0px; }
+      footer .footer-item:after {
+        display: none; }
     footer .first-block h3.title {
       margin-bottom: 6px; }
     footer .first-block p.info {
@@ -910,27 +1163,31 @@ footer {
       padding-right: 10px; }
     footer .second-block h3.title {
       margin-bottom: 7px; }
-    footer .second-block ul li a {
-      color: #ADC8E7;
-      font-family: 'Lato';
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 26px;
-      letter-spacing: 0; }
-    footer .third-block h3.title {
-      margin-top: 16px;
-      margin-bottom: 8px; }
-    footer .third-block ul li a {
-      color: #ADC8E7;
-      font-family: 'Lato';
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 26px;
-      letter-spacing: 0; }
-    footer .third-block ul li:last-child {
-      position: static;
-      padding-top: 27px;
-      padding-bottom: 17px; }
+    footer .second-block ul {
+      padding-bottom: 22px; }
+      footer .second-block ul li a {
+        color: #ADC8E7;
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 26px;
+        letter-spacing: 0; }
+    footer .third-block {
+      padding-bottom: 0px; }
+      footer .third-block h3.title {
+        margin-top: 16px;
+        margin-bottom: 8px; }
+      footer .third-block ul li a {
+        color: #ADC8E7;
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 26px;
+        letter-spacing: 0; }
+      footer .third-block ul li:last-child {
+        position: static;
+        padding-top: 27px;
+        padding-bottom: 17px; }
     footer .fourty-block h3.title {
       margin-bottom: 7px; }
     footer .fourty-block ul li {
@@ -950,7 +1207,8 @@ footer {
     footer .bottom-footer {
       padding: 20px 0; }
       footer .bottom-footer [class^="col-"] {
-        text-align: center; }
+        text-align: center;
+        padding: 0; }
       footer .bottom-footer span {
         line-height: 18px;
         font-size: 12px;
@@ -960,15 +1218,15 @@ footer {
     .navbar-default .navbar-toggle .icon-bar {
       background: #219CD3;
       /* Old browsers */
-      background: -moz-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -moz-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* FF3.6+ */
-      background: -webkit-gradient(linear, left, right, color-stop(0%, #219CD3), color-stop(100%, #063250));
+      background: -webkit-gradient(linear, right, left, color-stop(0%, #219CD3), color-stop(100%, #063250));
       /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -webkit-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -o-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* Opera 11.10+ */
-      background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
+      background: -ms-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #063250 100%);
       /* W3C */
