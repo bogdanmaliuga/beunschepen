@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Beunschepen</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
     <meta name="description" content="Beunschepen">
     <meta name="keywords" content="Beunschepen">
     <meta name="author" content="Beunschepen">
@@ -14,10 +14,19 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <!--[if IE]>
+    <style type="text/css" >
+        main .text h2,
+        main .contact h2{
+            background:none;
+            color:#1b3159 !important;
+        }
+    </style>
+    <![endif]-->
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
@@ -26,8 +35,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img class="desktop" src="img/logo.png">
+                <a class="navbar-brand" href="#">
+                    <img class="desktop" src="img/logo.png">
                     <img class="mobile" src="img/logo-mob.png" alt="">
+                    <img class="desktop-white" src="img/logo-white.png" alt="">
                 </a>
             </div>
             <div id="navbar2" class="navbar-collapse collapse">
@@ -38,7 +49,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">GALERIJ <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">SCHEPEN</a></li>
-                            <li class="divider"></li>
+                            
                             <li><a href="#">PROJECTEN</a></li>
                         </ul>
                     </li>
@@ -132,11 +143,7 @@
                                       LEES MEER <i class="fa fa-ship" aria-hidden="true"></i>
                                     </a>
                                 </div>
-                            <!-- <div class="button empty-btn">
-                                <div class="empty-inner">
-                                    <a href="" class="lees">LEES MEER <i class="fa fa-ship" aria-hidden="true"></i></a>
-                                </div>
-                            </div> -->
+                            
                         </div>
                         <div class="bloken-item">
                             <h4>Specialisten</h4>
@@ -215,7 +222,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="footer-item third-block">
-                        <h3 class="title">PROJECTEN.</h3>
+                        <h3 class="title">PROJECTEN</h3>
                         <ul>
                             <li><a href="#">Werk bij Nijmegen</a></li>
                             <li><a href="#">Werk bij Sluis Ternaayen</a></li>
@@ -230,7 +237,7 @@
                         <ul>
                             <li>Burgemeester de Raadtsingel 63</li>
                             <li>3311 JG Dordrecht</li>
-                            <li>Algemeen nummer<span>+31 (0)78-204 90 97</span></li>
+                            <li>Algemeen nummer<span>+31 (0)78 - 204 90 97</span></li>
                             <li>Offerte / calculator<span>+31 (0)6 - 115 635 49</span></li>
                             <li>Planning werk / schepen <span>+31 (0)6 - 527 271 06</span></li>
                         </ul>
@@ -245,7 +252,7 @@
                         <span>© 2017 ACCT Beunschepen BV</span>
                     </div>
                     <div class="col-xs-12 col-sm-6 text-right padding-null">
-                        <span>Website laten maken</span>
+                        <a href="">Website laten maken</a></span>
                     </div>
                 </div>
             </div>
