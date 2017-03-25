@@ -167,7 +167,20 @@ nav.navbar {
         margin-left: 11px; }
     nav.navbar .navbar-nav li .outlinebtn:hover {
       color: #fff;
-      background-color: transparent;
+      background: transperent;
+      /* Old browsers */
+      background: -moz-linear-gradient(right, transperent 0%, transperent 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, right, left, color-stop(0%, transperent), color-stop(100%, transperent));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(right, transperent 0%, transperent 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(right, transperent 0%, transperent 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(right, transperent 0%, transperent 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, transperent 0%, transperent 100%);
+      /* W3C */
       transition: all 0.3s linear; }
       nav.navbar .navbar-nav li .outlinebtn:hover a {
         transition: all 0.3s linear;
@@ -686,7 +699,20 @@ main .bloken {
           margin-left: 11px; }
       main .bloken .bloken-item .outlinebtn:hover {
         color: #fff;
-        background-color: transparent;
+        background: transperent;
+        /* Old browsers */
+        background: -moz-linear-gradient(right, transperent 0%, transperent 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, right, left, color-stop(0%, transperent), color-stop(100%, transperent));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(right, transperent 0%, transperent 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(right, transperent 0%, transperent 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(right, transperent 0%, transperent 100%);
+        /* IE10+ */
+        background: linear-gradient(to right, transperent 0%, transperent 100%);
+        /* W3C */
         transition: all 0.3s linear; }
         main .bloken .bloken-item .outlinebtn:hover a {
           transition: all 0.3s linear;
@@ -778,7 +804,20 @@ main .contact {
         font-size: 17px; }
     main .contact .outlinebtn:hover {
       color: #fff;
-      background-color: transparent;
+      background: transperent;
+      /* Old browsers */
+      background: -moz-linear-gradient(right, transperent 0%, transperent 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, right, left, color-stop(0%, transperent), color-stop(100%, transperent));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(right, transperent 0%, transperent 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(right, transperent 0%, transperent 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(right, transperent 0%, transperent 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, transperent 0%, transperent 100%);
+      /* W3C */
       transition: all 0.3s linear; }
       main .contact .outlinebtn:hover a {
         transition: all 0.3s linear;

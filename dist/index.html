@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Beunschepen</title>
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> 
     <meta name="description" content="Beunschepen">
     <meta name="keywords" content="Beunschepen">
     <meta name="author" content="Beunschepen">
@@ -14,15 +14,18 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <!--[if IE]>
+    <!--[if IE 10]>
     <style type="text/css" >
         main .text h2,
         main .contact h2{
             background:none;
             color:#1b3159 !important;
         }
+        
     </style>
     <![endif]-->
+
+    
 </head>
 
 <body>
@@ -258,10 +261,21 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery.min.js"></script>
+    <!--[if !IE]>
+       <script src="js/jquery.min.js"></script>
+       <script src="js/owl.carousel.min.js"></script>
+    <! <![endif]-->
+
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://inetqatar.com/carousel/owl-carousel/owl.carousel.js"></script>
+
+    <![endif]-->
+ 
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

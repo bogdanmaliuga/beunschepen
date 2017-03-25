@@ -300,7 +300,8 @@ nav.navbar {
                 }
                 &:hover {
                     color: #fff;
-                    background-color: transparent;
+                    @include linearGradient(transperent,
+                transperent);
                     transition: all 0.3s linear;
                     a {
                         transition: all 0.3s linear;
@@ -806,7 +807,8 @@ main {
                 }
                 &:hover {
                     color: #fff;
-                    background-color: transparent;
+                    @include linearGradient(transperent,
+                transperent);;
                     transition: all 0.3s linear;
                     a {
                         transition: all 0.3s linear;
@@ -881,7 +883,8 @@ main {
             }
             &:hover {
                 color: #fff;
-                background-color: transparent;
+                @include linearGradient(transperent,
+                transperent);
                 transition: all 0.3s linear;
                 a {
                     transition: all 0.3s linear;

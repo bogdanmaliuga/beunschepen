@@ -1,4 +1,5 @@
 $(document).ready(function() {
+ 
     var owl = $('.owl-carousel');
     owl.owlCarousel({
         loop: true,
@@ -33,29 +34,29 @@ $(document).ready(function() {
         }
 
     });
-    
-    
+
+
     $('.navbar-toggle').click(function(event) {
-        
+
         if ($(this).hasClass('collapsed')) {
             $(this).addClass('menu-show');
             $("#navbar2").css('text-align', 'center');
-            $('.navbar').css('height','100%');
+            $('.navbar').css('height', '100%');
             $("#navbar2").css('max-height', '100%');
             $("#navbar2").css('height', '100%');
         } else {
             $(this).removeClass('menu-show');
-            $('.navbar').css('height','auto');
+            $('.navbar').css('height', 'auto');
         }
     });
 
     $(".mouse").click(function() {
         $('html, body').animate({
-            scrollTop: $("#scrollTo").offset().top-$(".navbar-fixed-top").height()
+            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()
         }, 2000);
     });
-
-    var setMinHeight = function(minheight = 0) {
+    var minheight = 0
+    var setMinHeight = function() {
         jQuery('.owl-carousel').each(function(i, e) {
             var oldminheight = minheight;
             jQuery(e).find('.owl-item').each(function(i, e) {
