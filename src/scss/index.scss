@@ -19,6 +19,7 @@ $bottom) {
     background: -ms-linear-gradient(right, $top 0%, $bottom 100%);
     /* IE10+ */
     background: linear-gradient(to right, $top 0%, $bottom 100%);
+    transition: all 0.3s linear;
     /* W3C */
 }
 
@@ -37,6 +38,7 @@ $bottom) {
     border-color: -ms-linear-gradient(left, $top 0%, $bottom 100%);
     /* IE10+ */
     border-color: linear-gradient(to right, $top 0%, $bottom 100%);
+    transition: all 0.3s linear;
     /* W3C */
 }
 
@@ -51,12 +53,25 @@ $bottom) {
     /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(left, $top 0%, $bottom 100%);
     /* Opera 11.10+ */
-    color: -ms-linear-gradient(left, $top 0%, $bottom 100%);
+    background: -ms-linear-gradient(left, $top 0%, $bottom 100%);
     /* IE10+ */
     background: linear-gradient(to right, $top 0%, $bottom 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$top, endColorstr=$bottom); /* IE6-9 */
+    zoom: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0.3s linear;
     /* W3C */
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    main .text h2,
+    main .contact h2,
+    main .bloken .bloken-item h4 {
+        background: none !important;
+        color: #1b3159 !important;
+    }
 }
 
 @mixin border-gradient($from,
@@ -100,12 +115,16 @@ body {
         }
     }
 }
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
-    background:none;
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background: none;
 }
+
 .navbar-brand>img.desktop-white {
     display: none;
 }
+
 .navbar-fixed-top.scrolled {
     padding: 5.5px;
     background-color: #002E48;
@@ -113,60 +132,57 @@ body {
     img.desktop {
         display: none;
     }
-    @media(min-width: 768px){
-       img.desktop-white {
-        display: block;
-        margin-top: 7px;
-        } 
+    @media(min-width: 768px) {
+        img.desktop-white {
+            display: block;
+            margin-top: 7px;
+        }
     }
-    .icon-bar{
+    .icon-bar {
         background: none !important;
         background-color: white !important;
         // background-color: #fff;
-        
-       
     }
-    
-    
     .navbar-nav {
         li {
-            .outlinebtn{
+            .outlinebtn {
                 margin-top: 0;
-                a{
-                    padding:10px 30px;
-                     @media(max-width: 768px){
-                    background-color: transparent;
-                 }
+                &:hover {
+                    a {
+                        padding: 0px 37px;
+                    }
+                }
+                a {
+                    line-height: 38px !important;
+                    @media(max-width: 768px) {
+                        background-color: transparent;
+                    }
                 }
             }
             a {
                 color: white;
-                &:hover{
-                    color:#9EA2A9 ;
+                &:hover {
+                    color: #9EA2A9;
                 }
             }
         }
-        >.open{
-            >a{
-                background:none;
-
-                @media(min-width: 768px){
+        >.open {
+            >a {
+                background: none;
+                @media(min-width: 768px) {
                     background-color: #fff;
                 }
-                color:#9EA2A9 ;
+                color:#9EA2A9;
             }
-            ul.dropdown-menu{
+            ul.dropdown-menu {
                 min-width: 184px;
-                
-                background:none;
-                @media(min-width: 768px){
+                background: none;
+                @media(min-width: 768px) {
                     background-color: #fff;
                     box-shadow: 0 9px 12px rgba(0, 0, 0, .175);
                 }
-
-                
-                li{
-                    &:after{
+                li {
+                    &:after {
                         content: '';
                         display: block;
                         height: 1px;
@@ -176,24 +192,20 @@ body {
                         width: 90%;
                         opacity: 0.2;
                     }
-                    @media(min-width: 768px){
-                      &:last-child{
-                        &:after{
-                            display: none;
-                        }
-                    }  
-                    }
-                    
-                    a{
-                        color:#9EA2A9;
-                        &:hover{
-                            color:#0F587F;
+                    @media(min-width: 768px) {
+                        &:last-child {
+                            &:after {
+                                display: none;
+                            }
                         }
                     }
-                    
+                    a {
+                        color: #9EA2A9;
+                        &:hover {
+                            color: #0F587F;
+                        }
+                    }
                 }
-
-
             }
         }
     }
@@ -203,9 +215,10 @@ nav.navbar {
     margin-bottom: 0;
     border: none;
     padding-top: 22px;
-    padding-bottom: 12px;
+    padding-bottom: 15px;
     background-color: #fff;
     box-shadow: 0 0px 10px -2px #000000;
+    transition: all 0.3s linear;
     .navbar-nav {
         margin: 8px -30px;
     }
@@ -217,6 +230,7 @@ nav.navbar {
         }
     }
     .menu-show {
+        transition: all 0.3s linear;
         .icon-bar {
             transition: 300ms ease-in-out;
             background-color: #fff;
@@ -269,14 +283,20 @@ nav.navbar {
                 padding: 2px;
                 border-radius: 100px;
                 vertical-align: middle;
-                transition: all 0.3s linear;
                 margin-top: -8px;
                 @include linearGradient(#F18B00,
                 #E00C1C);
+                transition: all 0.3s linear;
+                .inline {
+                    background-color: white;
+                    border-radius: 100px;
+                    transition: all 0.3s linear;
+                }
                 a {
-                    font-size:13px;
+                    font-size: 13px;
                     letter-spacing: 0px;
-                    display: block;
+                    display: inline;
+                    line-height: 54px;
                     font-family: 'Lato';
                     font-weight: 700;
                     position: relative;
@@ -285,32 +305,46 @@ nav.navbar {
                     text-transform: uppercase;
                     background-color: white;
                     border: none;
-                    padding: 19px 37px;
+                    padding: 20.5px 37px;
                     border-radius: 100px;
                     color: #F18B00;
                     cursor: pointer;
+                    @include linearGradientColor(#F18B00,
+                    #E00C1C);
+                    transition: background 0.3s linear;
                     -webkit-appearance: none;
                     -moz-appearance: none;
-                    transition: all 0.3s linear;
                     .fa {
-                        transition: all 0.3s linear;
                         color: #E00C1C;
-                        margin-left: 11px;
+                        margin-left: 14px;
+                        display: inline;
+                        transition: background 0.3s linear;
                     }
                 }
                 &:hover {
                     color: #fff;
                     @include linearGradient(transperent,
-                transperent);
+                    transperent);
                     transition: all 0.3s linear;
-                    a {
+                    .inline {
+                        @include linearGradient(#F18B00,
+                        #E00C1C);
                         transition: all 0.3s linear;
+                    }
+                    a {
                         background: none;
+                        display: block;
+                        line-height: 0px;
                         color: white;
                         text-decoration: none;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: white;
+                        transition: color 0.3s linear;
+                        transition: background 0.3s linear;
+                        transition: -webkit-text-fill-color 0.3s linear;
                         i {
-                            color: white;
                             transition: all 0.3s linear;
+                            color: white;
                         }
                     }
                 }
@@ -337,28 +371,24 @@ nav.navbar {
                         a {
                             padding: 5.5px 15.5px;
                         }
-                         &:after{
-                        content: '';
-                        display: block;
-                        height: 1px;
-                        margin: 8px auto;
-                        overflow: hidden;
-                        background-color: #D8D8D8;
-                        width: 90%;
-                        opacity: 0.2;
-                    }
-                    
-                    &:last-child{
-                        &:after{
-                            display: none;
-                      
+                        &:after {
+                            content: '';
+                            display: block;
+                            height: 1px;
+                            margin: 8px auto;
+                            overflow: hidden;
+                            background-color: #D8D8D8;
+                            width: 90%;
+                            opacity: 0.2;
+                        }
+                        &:last-child {
+                            &:after {
+                                display: none;
+                            }
                         }
                     }
-                    }
-                   
                 }
             }
-
             li.dropdown {
                 a {
                     padding: 12px 16px;
@@ -389,7 +419,6 @@ nav.navbar {
                             background-color: transparent;
                         }
                     }
-
                 }
             }
         }
@@ -397,16 +426,25 @@ nav.navbar {
 }
 
 header {
-    background: url(../img/bg.png) 100% 100% no-repeat;
-    background-position: center center;
-    background-size: cover;
+    // background: url(../img/bg.png) 100% 100% no-repeat;
     position: relative;
     .main-header {
-        padding-top: 273px;
-        padding-bottom: 309px;
         text-align: center;
         color: white;
         width: 100%;
+        .slider-item {
+            img {
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .slider-info {
+                padding-top: 273px;
+                padding-bottom: 250px;
+            }
+        }
         h1 {
             font-size: 80px;
             letter-spacing: 4px;
@@ -444,7 +482,7 @@ header {
             .fa {
                 margin: 0px 0px 0px 16px;
                 font-size: 18px;
-                color:white;
+                color: white;
                 transition: all 0.3s linear;
             }
             &:hover {
@@ -460,8 +498,9 @@ header {
         }
     }
     .bottom-header {
-        position: absolute;
+        // position: absolute;
         bottom: 0;
+        z-index: 2;
         text-align: center;
         color: white;
         width: 100%;
@@ -808,7 +847,8 @@ main {
                 &:hover {
                     color: #fff;
                     @include linearGradient(transperent,
-                transperent);;
+                    transperent);
+                    ;
                     transition: all 0.3s linear;
                     a {
                         transition: all 0.3s linear;
@@ -845,55 +885,93 @@ main {
             display: inline-block;
         }
         .outlinebtn {
-            display: inline-block;
             padding: 2px;
             border-radius: 100px;
             vertical-align: middle;
-            transition: all 0.3s linear;
             @include linearGradient(#F18B00,
             #E00C1C);
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+            .inline {
+                border-radius: 100px;
+                background: white;
+                -webkit-transition: all 0.5s linear;
+                -moz-transition: all 0.5s linear;
+                -o-transition: all 0.5s linear;
+                transition: all 0.5s linear;
+                opacity: 1;
+            }
             a {
                 font-size: 13px;
                 font-family: 'Lato';
                 letter-spacing: 0px;
                 font-weight: 700;
                 color: #136691;
-                display: block;
+                display: inline;
                 font-family: 'Lato';
                 font-weight: 700;
                 position: relative;
                 width: 100%;
                 height: 100%;
                 text-transform: uppercase;
-                background-color: white;
+                background-color: transparent;
                 border: none;
-                padding: 19px 35px;
+                padding: 0px 35px;
+                line-height: 55px;
                 border-radius: 100px;
                 color: #F18B00;
                 cursor: pointer;
+                @include linearGradientColor(#F18B00,
+                #E00C1C);
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                transition: all 0.3s linear;
+                -webkit-transition: all 0.5s linear;
+                -moz-transition: all 0.5s linear;
+                -o-transition: all 0.5s linear;
+                 transition: all 0.5s linear;
                 .fa {
-                    transition: all 0.3s linear;
                     color: #E00C1C;
                     margin-left: 14px;
                     font-size: 17px;
+                    display: inline;
+                    -webkit-transition: all 0.5s linear;
+                    -moz-transition: all 0.5s linear;
+                    -o-transition: all 0.5s linear;
+                    transition: all 0.5s linear;
                 }
             }
             &:hover {
                 color: #fff;
-                @include linearGradient(transperent,
-                transperent);
+                
                 transition: all 0.3s linear;
+                .inline {
+                    @include linearGradient(#F18B00,
+                    #E00C1C);
+
+                    -webkit-transition: all 0.5s linear;
+                    -moz-transition: all 0.5s linear;
+                    -o-transition: all 0.5s linear;
+                    transition: all 0.5s linear;
+                }
                 a {
-                    transition: all 0.3s linear;
+                    display: inline-block;
                     background: none;
                     color: white;
                     text-decoration: none;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: white;
+                    -webkit-transition: all 0.5s linear;
+                    -moz-transition: all 0.5s linear;
+                    -o-transition: all 0.5s linear;
+                    transition: all 0.5s linear;
                     i {
                         color: white;
-                        transition: all 0.3s linear;
+                        -webkit-transition: all 0.5s linear;
+                        -moz-transition: all 0.5s linear;
+                        -o-transition: all 0.5s linear;
+                        transition: all 0.5s linear;
                     }
                 }
             }
@@ -1085,12 +1163,12 @@ footer {
             line-height: 71px;
             letter-spacing: 0;
         }
-        a{
-           color: #ADC8E7;
+        a {
+            color: #ADC8E7;
             font-size: 12px;
             font-family: 'Lato';
             line-height: 71px;
-            letter-spacing: 0; 
+            letter-spacing: 0;
         }
     }
 }
@@ -1175,6 +1253,9 @@ footer {
 }
 
 @media (max-width: 767px) {
+    nav.navbar .navbar-nav li .outlinebtn .inline {
+        background-color: transparent;
+    }
     body {
         padding-top: 57px;
     }
@@ -1198,8 +1279,12 @@ footer {
     }
     header {
         .main-header {
-            padding-top: 25px;
-            padding-bottom: 48px;
+            .slider-item {
+                .slider-info {
+                    padding-top: 25px;
+                    padding-bottom: 48px;
+                }
+            }
             h1 {
                 font-size: 20px;
                 letter-spacing: 1px;
@@ -1247,7 +1332,7 @@ footer {
             display: none;
         }
     }
-    nav.navbar .navbar-nav{
+    nav.navbar .navbar-nav {
         margin: 8px 0;
     }
     main {
@@ -1298,17 +1383,17 @@ footer {
                 }
             }
         }
-        .owl-theme .owl-nav.disabled+.owl-dots{
+        .owl-theme .owl-nav.disabled+.owl-dots {
             margin-top: 14px;
         }
-        .content-text{
+        .content-text {
             padding-top: 20px;
-            div.col-xs-12{
+            div.col-xs-12 {
                 padding-right: 15px !important;
                 padding-left: 15px !important;
                 text-align: center;
             }
-             h2 {
+            h2 {
                 font-size: 18px;
                 letter-spacing: 1px;
             }
@@ -1328,16 +1413,18 @@ footer {
                 padding-top: 3px;
                 margin-bottom: 20px;
             }
-            
             p.content-more {
                 color: #5E6A89;
-                font-size: 14px;
-                line-height: 34px;
+                font-size: 13px;
+                line-height: 28px;
                 text-align: center;
                 margin: 15px 0;
                 margin-bottom: 40px;
                 padding: 0;
                 padding: 0 15px;
+            }
+            p.content-more.last {
+                margin-bottom: 0px;
             }
             h4 {
                 font-size: 16px;
@@ -1405,10 +1492,10 @@ footer {
             padding-top: 25px;
             padding-bottom: 9px;
             h2 {
-                    font-size: 23px;
-                    /* font-weight: 400; */
-                    letter-spacing: 0.5px;
-                    margin-top: 18px;
+                font-size: 23px;
+                /* font-weight: 400; */
+                letter-spacing: 0.5px;
+                margin-top: 18px;
             }
             h3 {
                 letter-spacing: 0.89px;
@@ -1457,7 +1544,7 @@ footer {
                 font-weight: 700;
                 letter-spacing: 0.25px;
                 margin-top: 20px;
-    margin-bottom: 24px;
+                margin-bottom: 24px;
             }
             .outlinebtn {
                 margin-top: 1px;
@@ -1558,7 +1645,7 @@ footer {
                     }
                     &:last-child {
                         position: static;
-                            padding-top: 25px;
+                        padding-top: 25px;
                         padding-bottom: 17px;
                     }
                 }
@@ -1600,7 +1687,7 @@ footer {
                 font-size: 12px;
                 font-family: 'Lato';
             }
-            a{
+            a {
                 line-height: 18px;
                 font-size: 12px;
                 font-family: 'Lato';

@@ -1,6 +1,17 @@
 $(document).ready(function() {
- 
-    var owl = $('.owl-carousel');
+
+    var owl2 = $('#owl-slider');
+    owl2.owlCarousel({
+        autoplay:true,
+        loop: true,
+        margin: 0,
+        items:1,
+        nav:false,
+        dots:false
+      
+    });
+
+    var owl = $('#owl-bottom-slider');
     owl.owlCarousel({
         loop: true,
         margin: 36,
@@ -26,7 +37,8 @@ $(document).ready(function() {
 
         }
     });
-    $('.owl-item:not(.active)').click(function(event) {
+
+    owl.find('.owl-item:not(.active)').click(function(event) {
         if ($(this).next().hasClass('active')) {
             owl.trigger('prev.owl.carousel');
         } else if ($(this).prev().hasClass('active')) {
@@ -47,6 +59,7 @@ $(document).ready(function() {
         } else {
             $(this).removeClass('menu-show');
             $('.navbar').css('height', 'auto');
+           
         }
     });
 
@@ -57,7 +70,7 @@ $(document).ready(function() {
     });
     var minheight = 0
     var setMinHeight = function() {
-        jQuery('.owl-carousel').each(function(i, e) {
+        jQuery('#owl-bottom-slider').each(function(i, e) {
             var oldminheight = minheight;
             jQuery(e).find('.owl-item').each(function(i, e) {
                 minheight = jQuery(e).height() > minheight ? jQuery(e).height() : minheight;
