@@ -19,7 +19,6 @@ $bottom) {
     background: -ms-linear-gradient(right, $top 0%, $bottom 100%);
     /* IE10+ */
     background: linear-gradient(to right, $top 0%, $bottom 100%);
-    transition: all 0.3s linear;
     /* W3C */
 }
 
@@ -38,7 +37,6 @@ $bottom) {
     border-color: -ms-linear-gradient(left, $top 0%, $bottom 100%);
     /* IE10+ */
     border-color: linear-gradient(to right, $top 0%, $bottom 100%);
-    transition: all 0.3s linear;
     /* W3C */
 }
 
@@ -57,10 +55,8 @@ $bottom) {
     /* IE10+ */
     background: linear-gradient(to right, $top 0%, $bottom 100%);
     // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$top, endColorstr=$bottom); /* IE6-9 */
-    zoom: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s linear;
     /* W3C */
 }
 
@@ -73,6 +69,8 @@ $bottom) {
         color: #1b3159 !important;
     }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
 
 @mixin border-gradient($from,
 $to,
@@ -93,6 +91,29 @@ $dir) {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
+
+
 
 body {
     color: $primary-color;
@@ -286,11 +307,12 @@ nav.navbar {
                 margin-top: -8px;
                 @include linearGradient(#F18B00,
                 #E00C1C);
-                transition: all 0.3s linear;
                 .inline {
                     background-color: white;
                     border-radius: 100px;
-                    transition: all 0.3s linear;
+                    transition: background 0.45s;
+
+                    
                 }
                 a {
                     font-size: 13px;
@@ -311,25 +333,26 @@ nav.navbar {
                     cursor: pointer;
                     @include linearGradientColor(#F18B00,
                     #E00C1C);
-                    transition: background 0.3s linear;
+                    transition: background 0.45s;
                     -webkit-appearance: none;
                     -moz-appearance: none;
                     .fa {
                         color: #E00C1C;
                         margin-left: 14px;
                         display: inline;
-                        transition: background 0.3s linear;
                     }
                 }
                 &:hover {
                     color: #fff;
                     @include linearGradient(transperent,
                     transperent);
-                    transition: all 0.3s linear;
+
                     .inline {
                         @include linearGradient(#F18B00,
                         #E00C1C);
-                        transition: all 0.3s linear;
+                        transition: background 0.45s;
+
+
                     }
                     a {
                         background: none;
@@ -339,11 +362,8 @@ nav.navbar {
                         text-decoration: none;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: white;
-                        transition: color 0.3s linear;
-                        transition: background 0.3s linear;
-                        transition: -webkit-text-fill-color 0.3s linear;
+                        transition:-webkit-text-fill-color 0.45s;
                         i {
-                            transition: all 0.3s linear;
                             color: white;
                         }
                     }
@@ -890,18 +910,11 @@ main {
             vertical-align: middle;
             @include linearGradient(#F18B00,
             #E00C1C);
-            -webkit-transition: all 0.5s linear;
-            -moz-transition: all 0.5s linear;
-            -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
+            
             .inline {
                 border-radius: 100px;
                 background: white;
-                -webkit-transition: all 0.5s linear;
-                -moz-transition: all 0.5s linear;
-                -o-transition: all 0.5s linear;
-                transition: all 0.5s linear;
-                opacity: 1;
+               
             }
             a {
                 font-size: 13px;
@@ -927,33 +940,24 @@ main {
                 #E00C1C);
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                -webkit-transition: all 0.5s linear;
-                -moz-transition: all 0.5s linear;
-                -o-transition: all 0.5s linear;
-                 transition: all 0.5s linear;
+                 transition:-webkit-text-fill-color 0.45s;
+                
                 .fa {
                     color: #E00C1C;
                     margin-left: 14px;
                     font-size: 17px;
                     display: inline;
-                    -webkit-transition: all 0.5s linear;
-                    -moz-transition: all 0.5s linear;
-                    -o-transition: all 0.5s linear;
-                    transition: all 0.5s linear;
+                    
                 }
             }
             &:hover {
                 color: #fff;
                 
-                transition: all 0.3s linear;
                 .inline {
                     @include linearGradient(#F18B00,
                     #E00C1C);
-
-                    -webkit-transition: all 0.5s linear;
-                    -moz-transition: all 0.5s linear;
-                    -o-transition: all 0.5s linear;
-                    transition: all 0.5s linear;
+                     transition:background 0.45s;
+                    
                 }
                 a {
                     display: inline-block;
@@ -962,16 +966,10 @@ main {
                     text-decoration: none;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: white;
-                    -webkit-transition: all 0.5s linear;
-                    -moz-transition: all 0.5s linear;
-                    -o-transition: all 0.5s linear;
-                    transition: all 0.5s linear;
+                    transition:-webkit-text-fill-color 0.45s;
                     i {
                         color: white;
-                        -webkit-transition: all 0.5s linear;
-                        -moz-transition: all 0.5s linear;
-                        -o-transition: all 0.5s linear;
-                        transition: all 0.5s linear;
+                       
                     }
                 }
             }
@@ -1121,33 +1119,33 @@ footer {
             }
         }
     }
-    @media(max-width: 992px) {
-        .fourty-block {
-            ul {
-                li {
-                    font-size: 14px;
-                    line-height: 30px;
-                    span {
-                        font-size: 14px;
-                        float: right;
-                    }
-                }
-            }
-        }
-    }
-    @media (min-width: 992px) and (max-width:1200px) {
+    // @media(max-width: 992px) {
+    //     .fourty-block {
+    //         ul {
+    //             li {
+    //                 font-size: 14px;
+    //                 line-height: 30px;
+    //                 span {
+    //                     font-size: 14px;
+    //                     float: right;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    @media (min-width: 992px) and (max-width:1300px) {
         .fourty-block {
             ul {
                 padding: 0;
                 li {
                     color: #ADC8E7;
                     font-size: 11px;
-                    line-height: 21px;
+                    // line-height: 21px;
                     span {
                         font-size: 10px;
                         display: block;
-                        float: none;
-                        text-align: right;
+                        
+                        
                     }
                 }
             }
@@ -1196,17 +1194,9 @@ footer {
     }
 }
 
-@media(max-width: 1200px) {
-    header {
-        .main-header {
-            h1 {
-                font-size: 60px;
-                font-weight: bold;
-            }
-            h3 {
-                font-size: 26px;
-            }
-        }
+@media (min-width:992px) and (max-width: 1300px) {
+    footer{
+
     }
 }
 
@@ -1233,7 +1223,7 @@ footer {
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 767px) and (max-width: 992px) {
     footer {
         .footer-item {
             min-height: 200px;
@@ -1244,11 +1234,18 @@ footer {
         }
     }
     nav.navbar .navbar-nav li .outlinebtn {
+
         a {
-            padding: 10px 20px;
+            // padding: 10px 20px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
-        margin-top: 0;
+       
         margin-left: 0;
+    }
+    .navbar-fixed-top.scrolled .navbar-nav li .outlinebtn:hover a{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -1297,6 +1294,7 @@ footer {
                 line-height: 22px;
                 font-weight: 300;
                 margin-bottom: 18px;
+                padding: 0 25px;
             }
             a.lees {
                 line-height: 43px;
@@ -1663,6 +1661,7 @@ footer {
                     font-size: 13px;
                     line-height: 26px;
                     letter-spacing: 0;
+
                     span {
                         color: #ADC8E7;
                         font-family: 'Lato';
@@ -1670,7 +1669,8 @@ footer {
                         font-size: 13px;
                         line-height: 26px;
                         letter-spacing: 0;
-                        padding-right: 15px;
+                        padding-left: 15px;
+                        float:none;
                     }
                 }
             }

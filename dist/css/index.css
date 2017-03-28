@@ -6,6 +6,30 @@
     background: none !important;
     color: #1b3159 !important; } }
 
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
 body {
   color: #333;
   padding-top: 101px; }
@@ -153,13 +177,11 @@ nav.navbar {
     background: -ms-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
     /* IE10+ */
     background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
-    transition: all 0.3s linear;
-    /* W3C */
-    transition: all 0.3s linear; }
+    /* W3C */ }
     nav.navbar .navbar-nav li .outlinebtn .inline {
       background-color: white;
       border-radius: 100px;
-      transition: all 0.3s linear; }
+      transition: background 0.45s; }
     nav.navbar .navbar-nav li .outlinebtn a {
       font-size: 13px;
       letter-spacing: 0px;
@@ -189,19 +211,16 @@ nav.navbar {
       background: -ms-linear-gradient(left, #F18B00 0%, #E00C1C 100%);
       /* IE10+ */
       background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
-      zoom: 1;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition: all 0.3s linear;
       /* W3C */
-      transition: background 0.3s linear;
+      transition: background 0.45s;
       -webkit-appearance: none;
       -moz-appearance: none; }
       nav.navbar .navbar-nav li .outlinebtn a .fa {
         color: #E00C1C;
         margin-left: 14px;
-        display: inline;
-        transition: background 0.3s linear; }
+        display: inline; }
     nav.navbar .navbar-nav li .outlinebtn:hover {
       color: #fff;
       background: transperent;
@@ -217,9 +236,7 @@ nav.navbar {
       background: -ms-linear-gradient(right, transperent 0%, transperent 100%);
       /* IE10+ */
       background: linear-gradient(to right, transperent 0%, transperent 100%);
-      transition: all 0.3s linear;
-      /* W3C */
-      transition: all 0.3s linear; }
+      /* W3C */ }
       nav.navbar .navbar-nav li .outlinebtn:hover .inline {
         background: #F18B00;
         /* Old browsers */
@@ -234,9 +251,8 @@ nav.navbar {
         background: -ms-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
         /* IE10+ */
         background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
-        transition: all 0.3s linear;
         /* W3C */
-        transition: all 0.3s linear; }
+        transition: background 0.45s; }
       nav.navbar .navbar-nav li .outlinebtn:hover a {
         background: none;
         display: block;
@@ -245,11 +261,8 @@ nav.navbar {
         text-decoration: none;
         -webkit-background-clip: text;
         -webkit-text-fill-color: white;
-        transition: color 0.3s linear;
-        transition: background 0.3s linear;
-        transition: -webkit-text-fill-color 0.3s linear; }
+        transition: -webkit-text-fill-color 0.45s; }
         nav.navbar .navbar-nav li .outlinebtn:hover a i {
-          transition: all 0.3s linear;
           color: white; }
   @media (min-width: 768px) {
     nav.navbar .navbar-nav .open a {
@@ -270,7 +283,6 @@ nav.navbar {
       background: -ms-linear-gradient(right, #219CD3 0%, #0F587F 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #0F587F 100%);
-      transition: all 0.3s linear;
       /* W3C */ }
     nav.navbar .navbar-nav .open ul.dropdown-menu {
       left: 0;
@@ -317,7 +329,6 @@ nav.navbar {
       background: -ms-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-      transition: all 0.3s linear;
       /* W3C */
       color: white; }
       nav.navbar .navbar-nav li .dropdown-menu li a {
@@ -493,10 +504,8 @@ main .content-text {
     background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
     /* IE10+ */
     background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-    zoom: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s linear;
     /* W3C */
     font-size: 36px;
     display: inline-block;
@@ -531,10 +540,8 @@ main .content-text {
     background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
     /* IE10+ */
     background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-    zoom: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s linear;
     /* W3C */ }
   main .content-text p.content-info {
     color: #5E6A89;
@@ -580,10 +587,8 @@ main .text {
     background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
     /* IE10+ */
     background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-    zoom: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s linear;
     /* W3C */
     font-size: 36px;
     display: inline-block;
@@ -609,10 +614,8 @@ main .text {
     background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
     /* IE10+ */
     background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-    zoom: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s linear;
     /* W3C */ }
   main .text p.content-text {
     color: #5E6A89;
@@ -698,10 +701,8 @@ main .bloken {
       background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-      zoom: 1;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition: all 0.3s linear;
       /* W3C */
       font-family: 'Lato';
       font-size: 24px;
@@ -743,7 +744,6 @@ main .bloken {
       background: -ms-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-      transition: all 0.3s linear;
       /* W3C */ }
       main .bloken .bloken-item .outlinebtn a {
         font-size: 13px;
@@ -790,7 +790,6 @@ main .bloken {
         background: -ms-linear-gradient(right, transperent 0%, transperent 100%);
         /* IE10+ */
         background: linear-gradient(to right, transperent 0%, transperent 100%);
-        transition: all 0.3s linear;
         /* W3C */
         transition: all 0.3s linear; }
         main .bloken .bloken-item .outlinebtn:hover a {
@@ -830,10 +829,8 @@ main .contact {
     background: -ms-linear-gradient(left, #219CD3 0%, #063250 100%);
     /* IE10+ */
     background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-    zoom: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s linear;
     /* W3C */
     display: inline-block; }
   main .contact .outlinebtn {
@@ -853,20 +850,10 @@ main .contact {
     background: -ms-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
     /* IE10+ */
     background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
-    transition: all 0.3s linear;
-    /* W3C */
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear; }
+    /* W3C */ }
     main .contact .outlinebtn .inline {
       border-radius: 100px;
-      background: white;
-      -webkit-transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      transition: all 0.5s linear;
-      opacity: 1; }
+      background: white; }
     main .contact .outlinebtn a {
       font-size: 13px;
       font-family: 'Lato';
@@ -899,29 +886,19 @@ main .contact {
       background: -ms-linear-gradient(left, #F18B00 0%, #E00C1C 100%);
       /* IE10+ */
       background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
-      zoom: 1;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition: all 0.3s linear;
       /* W3C */
       -webkit-appearance: none;
       -moz-appearance: none;
-      -webkit-transition: all 0.5s linear;
-      -moz-transition: all 0.5s linear;
-      -o-transition: all 0.5s linear;
-      transition: all 0.5s linear; }
+      transition: -webkit-text-fill-color 0.45s; }
       main .contact .outlinebtn a .fa {
         color: #E00C1C;
         margin-left: 14px;
         font-size: 17px;
-        display: inline;
-        -webkit-transition: all 0.5s linear;
-        -moz-transition: all 0.5s linear;
-        -o-transition: all 0.5s linear;
-        transition: all 0.5s linear; }
+        display: inline; }
     main .contact .outlinebtn:hover {
-      color: #fff;
-      transition: all 0.3s linear; }
+      color: #fff; }
       main .contact .outlinebtn:hover .inline {
         background: #F18B00;
         /* Old browsers */
@@ -936,12 +913,8 @@ main .contact {
         background: -ms-linear-gradient(right, #F18B00 0%, #E00C1C 100%);
         /* IE10+ */
         background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
-        transition: all 0.3s linear;
         /* W3C */
-        -webkit-transition: all 0.5s linear;
-        -moz-transition: all 0.5s linear;
-        -o-transition: all 0.5s linear;
-        transition: all 0.5s linear; }
+        transition: background 0.45s; }
       main .contact .outlinebtn:hover a {
         display: inline-block;
         background: none;
@@ -949,16 +922,9 @@ main .contact {
         text-decoration: none;
         -webkit-background-clip: text;
         -webkit-text-fill-color: white;
-        -webkit-transition: all 0.5s linear;
-        -moz-transition: all 0.5s linear;
-        -o-transition: all 0.5s linear;
-        transition: all 0.5s linear; }
+        transition: -webkit-text-fill-color 0.45s; }
         main .contact .outlinebtn:hover a i {
-          color: white;
-          -webkit-transition: all 0.5s linear;
-          -moz-transition: all 0.5s linear;
-          -o-transition: all 0.5s linear;
-          transition: all 0.5s linear; }
+          color: white; }
 
 footer {
   background: url(../img/bg3.png) 100% 100% no-repeat;
@@ -1015,7 +981,6 @@ footer {
     background: -ms-linear-gradient(right, #FFFFFF 0%, #DADADA 100%);
     /* IE10+ */
     background: linear-gradient(to right, #FFFFFF 0%, #DADADA 100%);
-    transition: all 0.3s linear;
     /* W3C */ }
   footer .second-block:after {
     background: #49AEDA;
@@ -1031,7 +996,6 @@ footer {
     background: -ms-linear-gradient(right, #49AEDA 0%, #219CD3 100%);
     /* IE10+ */
     background: linear-gradient(to right, #49AEDA 0%, #219CD3 100%);
-    transition: all 0.3s linear;
     /* W3C */ }
   footer .second-block h3.title {
     font-size: 14px; }
@@ -1061,7 +1025,6 @@ footer {
       background: -ms-linear-gradient(right, #FFB140 0%, #F18E00 100%);
       /* IE10+ */
       background: linear-gradient(to right, #FFB140 0%, #F18E00 100%);
-      transition: all 0.3s linear;
       /* W3C */ }
     footer .third-block h3.title {
       font-size: 14px; }
@@ -1096,7 +1059,6 @@ footer {
     background: -ms-linear-gradient(right, #FF5764 0%, #E00D1D 100%);
     /* IE10+ */
     background: linear-gradient(to right, #FF5764 0%, #E00D1D 100%);
-    transition: all 0.3s linear;
     /* W3C */ }
   footer .fourty-block h3.title {
     font-size: 14px; }
@@ -1114,25 +1076,15 @@ footer {
         float: right;
         font-family: 'Lato';
         font-weight: 400; }
-  @media (max-width: 992px) {
-    footer .fourty-block ul li {
-      font-size: 14px;
-      line-height: 30px; }
-      footer .fourty-block ul li span {
-        font-size: 14px;
-        float: right; } }
-  @media (min-width: 992px) and (max-width: 1200px) {
+  @media (min-width: 992px) and (max-width: 1300px) {
     footer .fourty-block ul {
       padding: 0; }
       footer .fourty-block ul li {
         color: #ADC8E7;
-        font-size: 11px;
-        line-height: 21px; }
+        font-size: 11px; }
         footer .fourty-block ul li span {
           font-size: 10px;
-          display: block;
-          float: none;
-          text-align: right; } }
+          display: block; } }
   footer .bottom-footer {
     margin-top: 98px;
     background-color: #04263D; }
@@ -1161,13 +1113,6 @@ footer {
 .owl-theme .owl-dots .owl-dot.active span {
   background-color: #fff; }
 
-@media (max-width: 1200px) {
-  header .main-header h1 {
-    font-size: 60px;
-    font-weight: bold; }
-  header .main-header h3 {
-    font-size: 26px; } }
-
 @media (max-width: 992px) {
   nav.navbar .navbar-nav li a {
     font-size: 12px;
@@ -1178,17 +1123,20 @@ footer {
   nav.navbar .button.empty-btn a {
     width: 100px; } }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 767px) and (max-width: 992px) {
   footer .footer-item {
     min-height: 200px; }
   footer [class^="col-"] {
     padding-left: 15px !important;
     padding-right: 15px !important; }
   nav.navbar .navbar-nav li .outlinebtn {
-    margin-top: 0;
     margin-left: 0; }
     nav.navbar .navbar-nav li .outlinebtn a {
-      padding: 10px 20px; } }
+      padding-left: 20px;
+      padding-right: 20px; }
+  .navbar-fixed-top.scrolled .navbar-nav li .outlinebtn:hover a {
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 @media (max-width: 767px) {
   nav.navbar .navbar-nav li .outlinebtn .inline {
@@ -1220,7 +1168,8 @@ footer {
     margin-top: 15px;
     line-height: 22px;
     font-weight: 300;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    padding: 0 25px; }
   header .main-header a.lees {
     line-height: 43px;
     display: inline-block;
@@ -1508,7 +1457,8 @@ footer {
         font-size: 13px;
         line-height: 26px;
         letter-spacing: 0;
-        padding-right: 15px; }
+        padding-left: 15px;
+        float: none; }
     footer .bottom-footer {
       padding: 20px 0;
       margin-top: 32px; }
@@ -1539,7 +1489,6 @@ footer {
       background: -ms-linear-gradient(right, #219CD3 0%, #063250 100%);
       /* IE10+ */
       background: linear-gradient(to right, #219CD3 0%, #063250 100%);
-      transition: all 0.3s linear;
       /* W3C */
       width: 16px;
       height: 3px;

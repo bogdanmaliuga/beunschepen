@@ -2,13 +2,13 @@ $(document).ready(function() {
 
     var owl2 = $('#owl-slider');
     owl2.owlCarousel({
-        autoplay:true,
+        autoplay: true,
         loop: true,
         margin: 0,
-        items:1,
-        nav:false,
-        dots:false
-      
+        items: 1,
+        nav: false,
+        dots: false
+
     });
 
     var owl = $('#owl-bottom-slider');
@@ -47,19 +47,21 @@ $(document).ready(function() {
 
     });
 
-
+    
     $('.navbar-toggle').click(function(event) {
 
         if ($(this).hasClass('collapsed')) {
             $(this).addClass('menu-show');
-            $("#navbar2").css('text-align', 'center');
-            $('.navbar').css('height', '100%');
+            $("#navbar2").css('text-align', 'center')
+            $('.navbar').css('height', '100%')
             $("#navbar2").css('max-height', '100%');
             $("#navbar2").css('height', '100%');
+            
         } else {
             $(this).removeClass('menu-show');
-            $('.navbar').css('height', 'auto');
            
+            $('.navbar').css('height', 'auto');
+
         }
     });
 
@@ -89,4 +91,18 @@ $(document).ready(function() {
         var $nav = $(".navbar-fixed-top");
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
+
+    $.fn.extend({
+        animateCss: function(animationName) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+        }
+    })
+    $(".outlinebtn").hover(function() {
+        $(this).children('.inline').animateCss('fadeIn');
+    });
+    
 });
+
