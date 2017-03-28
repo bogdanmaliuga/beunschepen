@@ -84,6 +84,9 @@ body {
     @media (min-width: 768px) {
       .navbar-fixed-top.scrolled .navbar-nav > .open > a {
         background-color: #fff; } }
+    @media (max-width: 768px) {
+      .navbar-fixed-top.scrolled .navbar-nav > .open > a {
+        color: white !important; } }
   .navbar-fixed-top.scrolled .navbar-nav > .open ul.dropdown-menu {
     min-width: 184px;
     background: none; }
@@ -236,17 +239,17 @@ nav.navbar {
       border-top-left-radius: 4px;
       background: #219CD3;
       /* Old browsers */
-      background: -moz-linear-gradient(right, #219CD3 0%, #0F587F 100%);
+      background: -moz-linear-gradient(right, #219CD3 0%, #12618B 100%);
       /* FF3.6+ */
-      background: -webkit-gradient(linear, right, left, color-stop(0%, #219CD3), color-stop(100%, #0F587F));
+      background: -webkit-gradient(linear, right, left, color-stop(0%, #219CD3), color-stop(100%, #12618B));
       /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(right, #219CD3 0%, #0F587F 100%);
+      background: -webkit-linear-gradient(right, #219CD3 0%, #12618B 100%);
       /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(right, #219CD3 0%, #0F587F 100%);
+      background: -o-linear-gradient(right, #219CD3 0%, #12618B 100%);
       /* Opera 11.10+ */
-      background: -ms-linear-gradient(right, #219CD3 0%, #0F587F 100%);
+      background: -ms-linear-gradient(right, #219CD3 0%, #12618B 100%);
       /* IE10+ */
-      background: linear-gradient(to right, #219CD3 0%, #0F587F 100%);
+      background: linear-gradient(to right, #219CD3 0%, #12618B 100%);
       /* W3C */
       color: white !important; }
     nav.navbar .navbar-nav .open ul.dropdown-menu {
@@ -1071,6 +1074,8 @@ footer {
     padding-right: 20px; } }
 
 @media (max-width: 767px) {
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    background-color: transparent; }
   nav.navbar .navbar-nav li .outlinebtn .inline {
     background-color: transparent; }
   body {

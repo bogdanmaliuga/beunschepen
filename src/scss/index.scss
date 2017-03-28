@@ -204,6 +204,11 @@ body {
                 @media(min-width: 768px) {
                     background-color: #fff;
                 }
+                @media(max-width: 768px){
+                    color:white !important;
+                   
+                }
+                
                 color:#9EA2A9;
             }
             ul.dropdown-menu {
@@ -376,8 +381,12 @@ nav.navbar {
                     border-top-right-radius: 4px;
                     border-top-left-radius: 4px;
                     @include linearGradient(#219CD3,
-                    #0F587F);
+                    #12618B);
                     color: white !important;
+                    
+
+                        
+                    
                 }
                 ul.dropdown-menu {
                     left: 0;
@@ -1230,6 +1239,9 @@ footer {
 }
 
 @media (max-width: 767px) {
+    .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+        background-color: transparent;
+    }
     nav.navbar .navbar-nav li .outlinebtn .inline {
         background-color: transparent;
     }
