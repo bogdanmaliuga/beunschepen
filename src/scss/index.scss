@@ -70,8 +70,6 @@ $bottom) {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {}
-
 @mixin border-gradient($from,
 $to,
 $width) {
@@ -320,15 +318,11 @@ nav.navbar {
                 margin-top: -8px;
                 @include linearGradient(#F18B00,
                 #E00C1C);
-                .inline {
-                    background-color: white;
-                    border-radius: 100px;
-                    transition: background 0.3s linear;
-                }
+                transition: all 0.3s linear;
                 a {
                     font-size: 13px;
                     letter-spacing: 0px;
-                    display: inline;
+                    display: block;
                     line-height: 54px;
                     font-family: 'Lato';
                     font-weight: 700;
@@ -338,43 +332,35 @@ nav.navbar {
                     text-transform: uppercase;
                     background-color: white;
                     border: none;
-                    padding: 20.5px 37px;
+                    padding: 0px 37px;
                     border-radius: 100px;
                     color: #F18B00;
                     cursor: pointer;
-                    @include linearGradientColor(#F18B00,
-                    #E00C1C);
                     -webkit-appearance: none;
                     -moz-appearance: none;
-                    transition: color 0.3s linear;
-                    transition: -webkit-text-fill-color 0.3s linear;
+                    transition: all 0.3s linear;
                     .fa {
                         color: #E00C1C;
                         margin-left: 14px;
-                        display: inline;
+                       
+                        transition: all 0.3s linear;
                     }
                 }
                 &:hover {
                     color: #fff;
                     @include linearGradient(transperent,
                     transperent);
-                    .inline {
-                        @include linearGradient(#F18B00,
-                        #E00C1C);
-                        transition: background 0.3s linear;
-                    }
+                    transition: all 0.3s linear;
+                    
                     a {
                         background: none;
-                        display: block;
-                        line-height: 0px;
                         color: white;
                         text-decoration: none;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: white;
-                        transition: -webkit-text-fill-color 0.3s linear;
                         transition: color 0.3s linear;
-                        i {
+                        .fa{
                             color: white;
+                            transition: all 0.3s linear;
+                            
                         }
                     }
                 }
@@ -391,6 +377,7 @@ nav.navbar {
                     border-top-left-radius: 4px;
                     @include linearGradient(#219CD3,
                     #0F587F);
+                    color: white !important;
                 }
                 ul.dropdown-menu {
                     left: 0;
@@ -878,7 +865,7 @@ main {
                     color: #fff;
                     @include linearGradient(transperent,
                     transperent);
-                    ;
+                    
                     transition: all 0.3s linear;
                     a {
                         transition: all 0.3s linear;
@@ -916,65 +903,59 @@ main {
         }
         .outlinebtn {
             padding: 2px;
+            display: inline-block;
             border-radius: 100px;
             vertical-align: middle;
             @include linearGradient(#F18B00,
             #E00C1C);
-            .inline {
-                border-radius: 100px;
-                background: white;
-            }
+            transition: all 0.3s linear;
+            
             a {
                 font-size: 13px;
                 font-family: 'Lato';
                 letter-spacing: 0px;
                 font-weight: 700;
                 color: #136691;
-                display: inline;
+                display: block;
                 font-family: 'Lato';
                 font-weight: 700;
                 position: relative;
                 width: 100%;
                 height: 100%;
                 text-transform: uppercase;
-                background-color: transparent;
+                background-color: white;
                 border: none;
-                padding: 0px 35px;
+                padding:0px 35px;
                 line-height: 55px;
                 border-radius: 100px;
                 color: #F18B00;
                 cursor: pointer;
-                @include linearGradientColor(#F18B00,
-                #E00C1C);
+                
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                transition: -webkit-text-fill-color 0.3s linear;
-                transition: color 0.3s linear;
+              
+                transition: all 0.3s linear;
                 .fa {
                     color: #E00C1C;
                     margin-left: 14px;
                     font-size: 17px;
-                    display: inline;
+                    
+                    transition: all 0.3s linear;
                 }
             }
             &:hover {
                 color: #fff;
-                .inline {
-                    @include linearGradient(#F18B00,
-                    #E00C1C);
-                    transition: background 0.3s linear;
-                }
+                transition: all 0.3s linear;
                 a {
-                    display: inline-block;
+                   
                     background: none;
                     color: white;
                     text-decoration: none;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: white;
-                    transition: -webkit-text-fill-color 0.3s linear;
-                    transition: color 0.3s linear;
+                    
+                    transition: all 0.3s linear;
                     i {
                         color: white;
+                        transition: all 0.3s linear;
                     }
                 }
             }
@@ -1549,6 +1530,7 @@ footer {
                     padding: 0px 18px;
                     font-size: 11px;
                     font-weight: 400;
+                    line-height: 45px;
                     .fa {
                         margin-left: 8px;
                         font-size: 14px;
@@ -1670,8 +1652,8 @@ footer {
                         padding-left: 15px;
                         float: none;
                     }
-                    &:nth-child(3){
-                        span{
+                    &:nth-child(3) {
+                        span {
                             padding-left: 50px;
                         }
                     }

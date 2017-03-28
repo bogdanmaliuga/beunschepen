@@ -92,19 +92,19 @@ $(document).ready(function() {
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
 
-    $.fn.extend({
-        animateCss: function(animationName) {
-            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            this.addClass('animated ' + animationName).one(animationEnd, function() {
-                $(this).removeClass('animated ' + animationName);
-            });
-        }
-    })
-    $(".outlinebtn").hover(function() {
-        $(this).children('.inline').animateCss('fadeIn');
-    },function () {
-        $(this).children('.inline').children('a').animateCss('fadeIn');
-    });
+    // $.fn.extend({
+    //     animateCss: function(animationName) {
+    //         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    //         this.addClass('animated ' + animationName).one(animationEnd, function() {
+    //             $(this).removeClass('animated ' + animationName);
+    //         });
+    //     }
+    // })
+    // $(".outlinebtn").hover(function() {
+    //     $(this).children('.inline').animateCss('fadeIn');
+    // },function () {
+    //     $(this).children('.inline').children('a').animateCss('fadeIn');
+    // });
     
     
 });
