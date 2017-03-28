@@ -102,7 +102,10 @@ $(document).ready(function() {
     })
     $(".outlinebtn").hover(function() {
         $(this).children('.inline').animateCss('fadeIn');
+    },function () {
+        $(this).children('.inline').children('a').animateCss('fadeIn');
     });
+    
     
 });
 

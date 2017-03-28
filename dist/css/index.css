@@ -181,7 +181,7 @@ nav.navbar {
     nav.navbar .navbar-nav li .outlinebtn .inline {
       background-color: white;
       border-radius: 100px;
-      transition: background 0.45s; }
+      transition: background 0.3s linear; }
     nav.navbar .navbar-nav li .outlinebtn a {
       font-size: 13px;
       letter-spacing: 0px;
@@ -214,9 +214,10 @@ nav.navbar {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       /* W3C */
-      transition: background 0.45s;
       -webkit-appearance: none;
-      -moz-appearance: none; }
+      -moz-appearance: none;
+      transition: color 0.3s linear;
+      transition: -webkit-text-fill-color 0.3s linear; }
       nav.navbar .navbar-nav li .outlinebtn a .fa {
         color: #E00C1C;
         margin-left: 14px;
@@ -252,7 +253,7 @@ nav.navbar {
         /* IE10+ */
         background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
         /* W3C */
-        transition: background 0.45s; }
+        transition: background 0.3s linear; }
       nav.navbar .navbar-nav li .outlinebtn:hover a {
         background: none;
         display: block;
@@ -261,7 +262,8 @@ nav.navbar {
         text-decoration: none;
         -webkit-background-clip: text;
         -webkit-text-fill-color: white;
-        transition: -webkit-text-fill-color 0.45s; }
+        transition: -webkit-text-fill-color 0.3s linear;
+        transition: color 0.3s linear; }
         nav.navbar .navbar-nav li .outlinebtn:hover a i {
           color: white; }
   @media (min-width: 768px) {
@@ -891,7 +893,8 @@ main .contact {
       /* W3C */
       -webkit-appearance: none;
       -moz-appearance: none;
-      transition: -webkit-text-fill-color 0.45s; }
+      transition: -webkit-text-fill-color 0.3s linear;
+      transition: color 0.3s linear; }
       main .contact .outlinebtn a .fa {
         color: #E00C1C;
         margin-left: 14px;
@@ -914,7 +917,7 @@ main .contact {
         /* IE10+ */
         background: linear-gradient(to right, #F18B00 0%, #E00C1C 100%);
         /* W3C */
-        transition: background 0.45s; }
+        transition: background 0.3s linear; }
       main .contact .outlinebtn:hover a {
         display: inline-block;
         background: none;
@@ -922,7 +925,8 @@ main .contact {
         text-decoration: none;
         -webkit-background-clip: text;
         -webkit-text-fill-color: white;
-        transition: -webkit-text-fill-color 0.45s; }
+        transition: -webkit-text-fill-color 0.3s linear;
+        transition: color 0.3s linear; }
         main .contact .outlinebtn:hover a i {
           color: white; }
 
@@ -1375,7 +1379,7 @@ footer {
     main .contact .outlinebtn {
       margin-top: 1px; }
       main .contact .outlinebtn a {
-        padding: 15px 18px;
+        padding: 0px 18px;
         font-size: 11px;
         font-weight: 400; }
         main .contact .outlinebtn a .fa {
@@ -1459,6 +1463,12 @@ footer {
         letter-spacing: 0;
         padding-left: 15px;
         float: none; }
+      footer .fourty-block ul li:nth-child(3) span {
+        padding-left: 50px; }
+      footer .fourty-block ul li:nth-child(4) span {
+        padding-left: 48px; }
+      footer .fourty-block ul li:last-child span {
+        padding-left: 17px; }
     footer .bottom-footer {
       padding: 20px 0;
       margin-top: 32px; }

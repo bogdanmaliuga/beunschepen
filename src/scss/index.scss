@@ -92,28 +92,41 @@ $dir) {
     -webkit-text-fill-color: transparent;
 }
 
-
-
-
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
-
-
-
-
 
 body {
     color: $primary-color;
@@ -310,9 +323,7 @@ nav.navbar {
                 .inline {
                     background-color: white;
                     border-radius: 100px;
-                    transition: background 0.45s;
-
-                    
+                    transition: background 0.3s linear;
                 }
                 a {
                     font-size: 13px;
@@ -333,9 +344,10 @@ nav.navbar {
                     cursor: pointer;
                     @include linearGradientColor(#F18B00,
                     #E00C1C);
-                    transition: background 0.45s;
                     -webkit-appearance: none;
                     -moz-appearance: none;
+                    transition: color 0.3s linear;
+                    transition: -webkit-text-fill-color 0.3s linear;
                     .fa {
                         color: #E00C1C;
                         margin-left: 14px;
@@ -346,13 +358,10 @@ nav.navbar {
                     color: #fff;
                     @include linearGradient(transperent,
                     transperent);
-
                     .inline {
                         @include linearGradient(#F18B00,
                         #E00C1C);
-                        transition: background 0.45s;
-
-
+                        transition: background 0.3s linear;
                     }
                     a {
                         background: none;
@@ -362,7 +371,8 @@ nav.navbar {
                         text-decoration: none;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: white;
-                        transition:-webkit-text-fill-color 0.45s;
+                        transition: -webkit-text-fill-color 0.3s linear;
+                        transition: color 0.3s linear;
                         i {
                             color: white;
                         }
@@ -910,11 +920,9 @@ main {
             vertical-align: middle;
             @include linearGradient(#F18B00,
             #E00C1C);
-            
             .inline {
                 border-radius: 100px;
                 background: white;
-               
             }
             a {
                 font-size: 13px;
@@ -940,24 +948,21 @@ main {
                 #E00C1C);
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                 transition:-webkit-text-fill-color 0.45s;
-                
+                transition: -webkit-text-fill-color 0.3s linear;
+                transition: color 0.3s linear;
                 .fa {
                     color: #E00C1C;
                     margin-left: 14px;
                     font-size: 17px;
                     display: inline;
-                    
                 }
             }
             &:hover {
                 color: #fff;
-                
                 .inline {
                     @include linearGradient(#F18B00,
                     #E00C1C);
-                     transition:background 0.45s;
-                    
+                    transition: background 0.3s linear;
                 }
                 a {
                     display: inline-block;
@@ -966,10 +971,10 @@ main {
                     text-decoration: none;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: white;
-                    transition:-webkit-text-fill-color 0.45s;
+                    transition: -webkit-text-fill-color 0.3s linear;
+                    transition: color 0.3s linear;
                     i {
                         color: white;
-                       
                     }
                 }
             }
@@ -1144,8 +1149,6 @@ footer {
                     span {
                         font-size: 10px;
                         display: block;
-                        
-                        
                     }
                 }
             }
@@ -1195,9 +1198,7 @@ footer {
 }
 
 @media (min-width:992px) and (max-width: 1300px) {
-    footer{
-
-    }
+    footer {}
 }
 
 @media (max-width:992px) {
@@ -1234,16 +1235,14 @@ footer {
         }
     }
     nav.navbar .navbar-nav li .outlinebtn {
-
         a {
             // padding: 10px 20px;
             padding-left: 20px;
             padding-right: 20px;
         }
-       
         margin-left: 0;
     }
-    .navbar-fixed-top.scrolled .navbar-nav li .outlinebtn:hover a{
+    .navbar-fixed-top.scrolled .navbar-nav li .outlinebtn:hover a {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -1547,7 +1546,7 @@ footer {
             .outlinebtn {
                 margin-top: 1px;
                 a {
-                    padding: 15px 18px;
+                    padding: 0px 18px;
                     font-size: 11px;
                     font-weight: 400;
                     .fa {
@@ -1661,7 +1660,6 @@ footer {
                     font-size: 13px;
                     line-height: 26px;
                     letter-spacing: 0;
-
                     span {
                         color: #ADC8E7;
                         font-family: 'Lato';
@@ -1670,7 +1668,22 @@ footer {
                         line-height: 26px;
                         letter-spacing: 0;
                         padding-left: 15px;
-                        float:none;
+                        float: none;
+                    }
+                    &:nth-child(3){
+                        span{
+                            padding-left: 50px;
+                        }
+                    }
+                    &:nth-child(4) {
+                        span {
+                            padding-left: 48px;
+                        }
+                    }
+                    &:last-child {
+                        span {
+                            padding-left: 17px;
+                        }
                     }
                 }
             }
@@ -1704,12 +1717,6 @@ footer {
                 height: 3px;
                 border-radius: 4px;
             }
-            // &:hover {
-            //     background-color: #fff;
-            // }
-            // &:focus {
-            //     background-color: #fff;
-            // }
         }
         .collapse.in {
             text-align: center;
