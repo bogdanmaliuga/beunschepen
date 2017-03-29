@@ -83,7 +83,8 @@ body {
     color: #9EA2A9; }
     @media (min-width: 768px) {
       .navbar-fixed-top.scrolled .navbar-nav > .open > a {
-        background-color: #fff; } }
+        background-color: #fff;
+        color: #9EA2A9 !important; } }
     @media (max-width: 768px) {
       .navbar-fixed-top.scrolled .navbar-nav > .open > a {
         color: white !important; } }
